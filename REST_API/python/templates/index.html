@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thủy Sinh Shop</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Phần header trên -->
+        <div class="top-header">
+            <div class="container">
+                <span class="mobile-title">Chào mừng bạn ghé thăm Thủy Sinh Shop</span>
+                <div class="left-info">
+                    <!-- thêm icon email và phone -->           
+                    <a href="mailto:info@thuysinhshop.com"><i class="fas fa-envelope"></i> info@thuysinhshop.com</a>
+                    <a href="tel:0123456789"><i class="fas fa-phone"></i> Hotline: 0123456789</a>
+                </div>
+                <div class="right-info">
+                    <!-- thêm icon giao hàng và nhận hàng -->
+                    <span> <i class="fas fa-truck"></i> Giao hàng toàn quốc</span>
+                    <span> <i class="fas fa-clock"></i> Nhận hàng trước thanh toán sau</span>
+                    <a href="https://www.tiktok.com/@thuysinhshop"><i class="fab fa-tiktok" style="color: #ffffff;"></i></a>
+                    <a href="https://www.facebook.com/thuysinhshop"><i class="fab fa-facebook" style="color: #ffffff;"></i></a>
+                    <a href="https://www.youtube.com/thuysinhshop"><i class="fab fa-youtube" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần header dưới -->
+        <div class="main-header">
+            <div class="container">
+                <!-- tạo nút menu mobile -->
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="logo">
+                    <a href="/">
+                        <img src="https://thuysinh2.maugiaodien.com/wp-content/uploads/2024/05/logocacanh-16923410162-1.png" alt="Logo Thủy Sinh Shop">
+                    </a>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="fas fa-search" type="submit"></button>
+                </div>
+                <div class="contact-icons">
+                    <a href="#" class="hotline">HOTLINE : 000555xxxxx</a>
+                    <a href="#" class="zalo">ZALO : 0905874135</a>
+                </div>
+                <!-- thêm icon cart -->
+                <div class="cart-icon-mobile">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu điều hướng chính -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li><a href="/gioi-thieu"><i class="fas fa-user"></i> Giới thiệu</a></li>
+                    <li class="has-submenu">
+                        <a href="/be-ca-thuy-sinh"><i class="fas fa-fish"></i> Bể cá thủy sinh </a>
+                        <ul class="submenu">
+                            <li><a href="/chan-tu">Chân tủ</a></li>
+                            <li><a href="/combo-loc-vach">Combo lọc vách</a></li>
+                            <li><a href="/combo-tran-duoi">Combo tràn dưới</a></li>
+                            <li><a href="/ho">Hồ</a></li>
+                            <li><a href="/sump">Sump</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/sinh-vat-thuy-sinh"><i class="fas fa-fish"></i> Sinh vật thủy sinh </a>
+                        <ul class="submenu">
+                            <li><a href="/ca">Cá</a></li>
+                            <li><a href="/cua">Cua</a></li>
+                            <li><a href="/oc-san-ho">Óc san hô</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/thiet-bi-thuy-sinh"><i class="fas fa-fish"></i> Thiết bị thủy sinh </a>
+                        <ul class="submenu">
+                            <li><a href="/loc">Lọc</a></li>
+                            <li><a href="/den">Đèn</a></li>
+                            <li><a href="/nhiet-ke">Nhiệt kế</a></li>
+                            <li><a href="/cac-loai-van">Các loại van</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/thuc-an-thuy-sinh"><i class="fas fa-fish"></i> Thức ăn thủy sinh </a>
+                        <ul class="submenu">
+                            <li><a href="/thuc-an-ca">Thức ăn cho cá</a></li>
+                            <li><a href="/thuc-an-cua">Thức ăn cho cua</a></li>
+                            <li><a href="/thuc-an-san-ho">Thức ăn cho san hô</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/thuoc-thuy-sinh"><i class="fas fa-fish"></i> Thuốc thủy sinh </a>
+                        <ul class="submenu">
+                            <li><a href="/thuoc-ban-ca">Thuốc bắn cá</a></li>
+                            <li><a href="/thuoc-ban-cua">Thuốc bắn cua</a></li>
+                            <li><a href="/thuoc-ban-san-ho">Thuốc bắn san hô</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+             <!-- tạo button  mobile có title là phân loại sản phẩm -->
+             <button class="btn-mobile"><i class="fas fa-bars"></i> Phân loại sản phẩm</button>
+            <div class="main-content">
+                <!-- Sidebar bên trái -->
+                <div class="sidebar-wrapper">
+                    <h3>Danh mục sản phẩm</h3>
+                    <aside class="sidebar">
+                        <ul>
+                            {% for cat in categories %}
+                            <li>
+                                <input type="checkbox" value="{{cat.id}}"> {{cat.name}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </aside>
+                    <h3>Bảo hành</h3>
+                    <aside class="sidebar">
+                        <ul>
+                            <li><a href="#"><input type="checkbox"> 1 tháng</a></li>
+                            <li><a href="#"><input type="checkbox"> 3 tháng</a></li>
+                            <li><a href="#"><input type="checkbox"> 6 tháng</a></li>
+                            <li><a href="#"><input type="checkbox"> 1 năm</a></li>
+                            <li><a href="#"><input type="checkbox"> 5 năm</a></li>
+                        </ul>
+                    </aside>
+                    <h3>Loại sản phẩm</h3>
+                    <aside class="sidebar">
+                        
+                        <ul>
+                            <li><a href="#"><input type="checkbox"> Bán rời</a></li>
+                            <li><a href="#"><input type="checkbox"> Bán combo</a></li>
+                            
+                        </ul>
+                    </aside>
+                    
+                </div>
+            <aside class="sidebar">
+                <h3>Thêm sản phẩm mới</h3>
+                    <form action="{{ url_for('add_product_route') }}" method="post" style="max-width:300px; margin:24px 0;">
+                        <input type="text" name="title" placeholder="Tên sản phẩm" required class="form-control mb-2">
+                        <input type="number" name="price" placeholder="Giá sản phẩm" required class="form-control mb-2">
+                        <input type="text" name="description" placeholder="Mô tả sản phẩm" required class="form-control mb-2">
+                        <input type="number" name="categoryId" placeholder="ID danh mục" required class="form-control mb-2">
+                        <input type="text" name="image" placeholder="Link hình ảnh" required class="form-control mb-2">
+                        <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                          {% if messages %}
+                            {% for category, message in messages %}
+                              <div class="alert alert-{{ category }} mt-2">{{ message }}</div>
+                            {% endfor %}
+                          {% endif %}
+                        {% endwith %}
+                        </form>
+            </aside>
+                <!-- Nội dung chính hiển thị sản phẩm -->
+                <section class="product-list">
+               {% for product in products %}
+                <div class="product-card">
+                    <img src="{{ product.images[0] }}" alt="{{ product.title }}">
+                    <h4>{{ product.title }}</h4>
+                    <p class="price">Giá: ${{ product.price }}</p>
+                </div>
+                {% endfor %}
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+          <!-- Phần trái -->
+          <div class="footer-left">
+            <img src="https://thuysinh2.maugiaodien.com/wp-content/uploads/2024/05/logocacanh-16923410162-1.png" alt="Logo cửa hàng" class="footer-logo">
+            <h3>Cửa hàng Thủy Sinh</h3>
+            <p>Hotline: 000000000</p>
+            <p>Địa chỉ: 123 Đường ABC, Phường XYZ, TP. HCM</p>
+            <p>Email: <a href="mailto:info@thuysinhshop.com">info@thuysinhshop.com</a></p>
+          </div>
+      
+          <!-- Phần giữa -->
+          <div class="footer-middle">
+            <h4>Hướng dẫn khách hàng</h4>
+            <br>
+            <ul>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Hướng dẫn thanh toán</a></li>
+              <li><a href="#">Hướng dẫn đổi trả</a></li>
+              <li><a href="#">Điều khoản dịch vụ</a></li>
+            </ul>
+          </div>
+      
+          <!-- Phần phải -->
+          <div class="footer-right">
+            <h4>Kết nối với chúng tôi</h4>
+            <br>
+            <img src="https://thuysinh2.maugiaodien.com/wp-content/uploads/2024/05/logocacanh-16923410162-1.png" alt="" style="width: 200px; height: 100px;">
+            <br>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/thuysinhshop" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:info@thuysinhshop.com" class="mail"><i class="fas fa-envelope"></i></a>
+                <a href="tel:000000000" class="phone"><i class="fas fa-phone"></i></a>
+                <a href="https://www.youtube.com/thuysinhshop" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>
